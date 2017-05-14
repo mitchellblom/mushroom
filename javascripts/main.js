@@ -3,9 +3,8 @@ app.run((FIREBASE_CONFIG) => {
 });
 
 app.controller("ShroomCtrl", ($http, $q, $scope, FIREBASE_CONFIG) => {
-	$scope.something = "Something";
-	$scope.shrooms = "Placeholder";
-
+	$scope.mushrooms = "";
+	
 
 let getShroomList = () => {
 	let shrooms = [];
@@ -28,7 +27,7 @@ let getShroomList = () => {
 let getShrooms = () => {
 	getShroomList().then((shrooms) => {
 		console.log("in get shrooms");
-		$scope.shrooms = shrooms;
+		$scope.mushrooms = shrooms;
 	}).catch((error) => {
 		console.log("get error", error);
 	});
