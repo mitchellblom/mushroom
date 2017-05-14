@@ -10,6 +10,8 @@
 
 <div ng-controller="ShroomCtrl">
 
+	<h1>Mushroom Mania</h1>
+
 	<input type="text" placeholder="Shroom Search" ng-model="searchText">
 
 	<div>
@@ -19,7 +21,7 @@
 	</div>
 
 	<ul ng-repeat="mushroom in mushrooms | filter: {'edible' : edibleFilter} | filter: searchText">
-		<li>{{mushroom.name}}: {{mushroom.description}}</li>
+		<li> <h4 class="capitalize">{{mushroom.name}}</h4> {{mushroom.description}}</li>
 	</ul>
 
 </div>
