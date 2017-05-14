@@ -8,12 +8,18 @@
 </head>
 <body ng-app="ShroomApp">
 
-
-
 <div ng-controller="ShroomCtrl">
-  <ul ng-repeat="mushroom in mushrooms">
-    <li>{{mushroom.name}}: {{mushroom.description}}</li>
-  </ul>
+
+	<div>
+		<label class="radio-inline"><input type="radio" name="canEat" ng-model="edibleFilter">All</label>
+		<label class="radio-inline"><input type="radio" name="canEat" ng-model="edibleFilter" value="true">Edible</label>
+		<label class="radio-inline"><input type="radio" name="canEat" ng-model="edibleFilter" value="false">Not Edible</label>
+	</div>
+
+	<ul ng-repeat="mushroom in mushrooms | filter: {'edible' : edibleFilter}">
+		<li>{{mushroom.name}}: {{mushroom.description}}</li>
+	</ul>
+
 </div>
 
 <script src="https://www.gstatic.com/firebasejs/3.9.0/firebase.js"></script>

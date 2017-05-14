@@ -4,7 +4,7 @@ app.run((FIREBASE_CONFIG) => {
 
 app.controller("ShroomCtrl", ($http, $q, $scope, FIREBASE_CONFIG) => {
 	$scope.mushrooms = "";
-	
+	$scope.edibleFilter = undefined;
 
 let getShroomList = () => {
 	let shrooms = [];
@@ -26,7 +26,6 @@ let getShroomList = () => {
 
 let getShrooms = () => {
 	getShroomList().then((shrooms) => {
-		console.log("in get shrooms");
 		$scope.mushrooms = shrooms;
 	}).catch((error) => {
 		console.log("get error", error);
