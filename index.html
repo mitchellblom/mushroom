@@ -10,13 +10,15 @@
 
 <div ng-controller="ShroomCtrl">
 
+	<input type="text" placeholder="Shroom Search" ng-model="searchText">
+
 	<div>
 		<label class="radio-inline"><input type="radio" name="canEat" ng-model="edibleFilter">All</label>
 		<label class="radio-inline"><input type="radio" name="canEat" ng-model="edibleFilter" value="true">Edible</label>
 		<label class="radio-inline"><input type="radio" name="canEat" ng-model="edibleFilter" value="false">Not Edible</label>
 	</div>
 
-	<ul ng-repeat="mushroom in mushrooms | filter: {'edible' : edibleFilter}">
+	<ul ng-repeat="mushroom in mushrooms | filter: {'edible' : edibleFilter} | filter: searchText">
 		<li>{{mushroom.name}}: {{mushroom.description}}</li>
 	</ul>
 
