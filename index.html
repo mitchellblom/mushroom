@@ -23,7 +23,7 @@
 	 		 <input type="text" class="form-control" placeholder="Shroom Search" aria-describedby="basic-addon1" ng-model="searchText">
 		</div>
 
-		<div>
+		<div class="radio-group">
 			<label class="radio-inline"><input type="radio" name="canEat" ng-model="edibleFilter">All</label>
 			<label class="radio-inline"><input type="radio" name="canEat" ng-model="edibleFilter" value="true">Non-poisonous</label>
 			<label class="radio-inline"><input type="radio" name="canEat" ng-model="edibleFilter" value="false">Poisonous</label>
@@ -33,6 +33,8 @@
 	<ul ng-repeat="mushroom in mushrooms | filter: {'edible' : edibleFilter} | filter: searchText">
 		<li> <h3 class="capitalize">{{mushroom.name}}</h3> {{mushroom.description}}</li>
 	</ul>
+
+	<footer>&copy Mushroom-pedia 2017 </footer>
 
 </div>
 

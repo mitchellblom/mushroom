@@ -9,6 +9,10 @@ body {
   -o-background-size: cover;
   background-size: cover; }
 
+footer {
+  display: flex;
+  justify-content: center; }
+
 .capitalize {
   text-transform: capitalize; }
 
@@ -19,13 +23,17 @@ h1 {
   color: dodgerblue; }
 
 .inline {
+  padding-top: 2%;
   display: flex;
   flex-direction: row;
   justify-content: center; }
 
 .shroomsHere {
-  padding: 60px; }
+  padding: 0 7%; }
 
 .shroomsHere > * {
   font-size: 1.3em;
   padding: 5px; }
+
+.radio-group {
+  padding: 0 5px; }
