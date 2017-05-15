@@ -13,17 +13,28 @@ body {
     background-size: cover;
 }
 
-
 .capitalize {
    text-transform: capitalize;
 }
 
 h1 {
+	padding: 40px;
 	font-family: mushroomfont;
-	font-size: 5em;
+	font-size: 5.5em;
 	color: $blue;
 }
 
-.inline > * {
-	display: inline-block;	
+.inline {
+	display: flex;	
+	flex-direction: row;
+	justify-content: center;
+}
+
+.shroomsHere {
+	padding: 60px;
+}
+
+.shroomsHere > * {
+	font-size: 1.3em;
+	padding: 5px;
 }

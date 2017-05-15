@@ -9,23 +9,29 @@
 <body ng-app="ShroomApp">
 
 <div class="inline">
-	<img><a href="http://s562.photobucket.com/user/robbywu/media/badger.gif.html" target="_blank"><img src="http://i562.photobucket.com/albums/ss67/robbywu/badger.gif" border="0" alt="badger photo badger.gif"/></a></img>
+	<img><a href="https://www.youtube.com/watch?v=NL6CDFn2i3I" target="_blank"><img src="http://i562.photobucket.com/albums/ss67/robbywu/badger.gif" border="0" alt="badger photo badger.gif"/></a></img>
 	
 	<h1>Mushroom-pedia</h1>
+
+	<img><a href="https://www.youtube.com/watch?v=NL6CDFn2i3I" target="_blank"><img src="http://i562.photobucket.com/albums/ss67/robbywu/badger.gif" border="0" alt="badger photo badger.gif"/></a></img>
 </div>
 
-<div ng-controller="ShroomCtrl">
+<div ng-controller="ShroomCtrl" class="shroomsHere">
 
-	<input type="text" placeholder="Shroom Search" ng-model="searchText">
+	<div class="inline">
+		<div class="input-group">
+	 		 <input type="text" class="form-control" placeholder="Shroom Search" aria-describedby="basic-addon1" ng-model="searchText">
+		</div>
 
-	<div>
-		<label class="radio-inline"><input type="radio" name="canEat" ng-model="edibleFilter">All</label>
-		<label class="radio-inline"><input type="radio" name="canEat" ng-model="edibleFilter" value="true">Non-poisonous</label>
-		<label class="radio-inline"><input type="radio" name="canEat" ng-model="edibleFilter" value="false">Poisonous</label>
+		<div>
+			<label class="radio-inline"><input type="radio" name="canEat" ng-model="edibleFilter">All</label>
+			<label class="radio-inline"><input type="radio" name="canEat" ng-model="edibleFilter" value="true">Non-poisonous</label>
+			<label class="radio-inline"><input type="radio" name="canEat" ng-model="edibleFilter" value="false">Poisonous</label>
+		</div>
 	</div>
 
 	<ul ng-repeat="mushroom in mushrooms | filter: {'edible' : edibleFilter} | filter: searchText">
-		<li> <h4 class="capitalize">{{mushroom.name}}</h4> {{mushroom.description}}</li>
+		<li> <h3 class="capitalize">{{mushroom.name}}</h3> {{mushroom.description}}</li>
 	</ul>
 
 </div>
