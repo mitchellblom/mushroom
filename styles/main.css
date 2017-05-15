@@ -1,2 +1,21 @@
+@font-face {
+  font-family: mushroomfont;
+  src: url("LMS Hippy Chick.ttf") format("opentype"); }
+
+body {
+  background: url("desertToon2.png");
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover; }
+
 .capitalize {
   text-transform: capitalize; }
+
+h1 {
+  font-family: mushroomfont;
+  font-size: 5em;
+  color: dodgerblue; }
+
+.inline > * {
+  display: inline-block; }

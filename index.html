@@ -1,23 +1,27 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Mushroom Mania</title>
+	<title>Mushroom-pedia</title>
 	<link rel="stylesheet" type="text/css" href="./lib/bower_components/bootstrap/dist/css/bootstrap.css">
-	<link rel="stylesheet" type="text/css" href="./styles/main.css">
 	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="./styles/main.css">
 </head>
 <body ng-app="ShroomApp">
 
-<div ng-controller="ShroomCtrl">
+<div class="inline">
+	<img><a href="http://s562.photobucket.com/user/robbywu/media/badger.gif.html" target="_blank"><img src="http://i562.photobucket.com/albums/ss67/robbywu/badger.gif" border="0" alt="badger photo badger.gif"/></a></img>
+	
+	<h1>Mushroom-pedia</h1>
+</div>
 
-	<h1>Mushroom Mania</h1>
+<div ng-controller="ShroomCtrl">
 
 	<input type="text" placeholder="Shroom Search" ng-model="searchText">
 
 	<div>
 		<label class="radio-inline"><input type="radio" name="canEat" ng-model="edibleFilter">All</label>
-		<label class="radio-inline"><input type="radio" name="canEat" ng-model="edibleFilter" value="true">Edible</label>
-		<label class="radio-inline"><input type="radio" name="canEat" ng-model="edibleFilter" value="false">Not Edible</label>
+		<label class="radio-inline"><input type="radio" name="canEat" ng-model="edibleFilter" value="true">Non-poisonous</label>
+		<label class="radio-inline"><input type="radio" name="canEat" ng-model="edibleFilter" value="false">Poisonous</label>
 	</div>
 
 	<ul ng-repeat="mushroom in mushrooms | filter: {'edible' : edibleFilter} | filter: searchText">
