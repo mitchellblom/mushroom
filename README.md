@@ -1,12 +1,12 @@
 # NSS Mushroom Mania Exercise
 
-![Splashpage]()
+![Splashpage](https://raw.githubusercontent.com/mitchellblom/mushroom/shroom/styles/screenshot.png)
 
 <hr>
 
 ## Summary
 
-Using **Angular** to display JSON from a database. User can filter through items by edibility and text input.
+Using **Angular** to display JSON from a database. User can filter through items by edibility and text input. Use of *ng-repeat*, *ng-click*, *filter*, and *ng-repeat*.
 
 <hr>
 
